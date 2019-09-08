@@ -25,7 +25,7 @@ SECRET_KEY = 'cc%nml6g9947t=ko82i9+m7d-2svlg^u*0@p^yr4pu)jvm8q(1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rotd.herokuapp.com']
+ALLOWED_HOSTS = ['rotd.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -75,9 +75,14 @@ WSGI_APPLICATION = 'rotd_game.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    "default": {
+        "ENGINE": os.environ.get("DATABASE_ENGINE"),
+        "NAME": os.environ.get("DATABASE_NAME"),
+        "USER": os.environ.get("DATABASE_USER"),
+        "PASSWORD": os.environ.get("DATABASE_PSWD"),
+        "HOST": os.environ.get("DATABASE_HOST"),
+        "PORT": os.environ.get("DATABASE_PORT"),
+        "URI": os.environ.get("DATABASE_URL"),
     }
 }
 

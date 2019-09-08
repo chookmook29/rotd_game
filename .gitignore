@@ -11,3 +11,4 @@ messageboard/__pychache__/
 # Other
 .DS_Store
 staticfiles/
+rotd_game/__pycache__/settings.cpython-37.pyc
