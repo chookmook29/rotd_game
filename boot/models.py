@@ -71,4 +71,4 @@ class Boot(models.Model):
     tonnage_sunk = models.IntegerField(default=0, verbose_name="tonnage sunk")
     active = models.BooleanField(default=True)
     def __str__(self):
-        return str(self.cmd_name) + " | " + str(self.bt_name)
+        return str(self.kmdt_name) + " | " + str(self.bt_name)
