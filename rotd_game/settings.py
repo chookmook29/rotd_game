@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['rotd.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    "boot.apps.BootConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,13 +77,13 @@ WSGI_APPLICATION = 'rotd_game.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": os.environ.get("DATABASE_ENGINE"),
-        "NAME": os.environ.get("DATABASE_NAME"),
-        "USER": os.environ.get("DATABASE_USER"),
-        "PASSWORD": os.environ.get("DATABASE_PSWD"),
-        "HOST": os.environ.get("DATABASE_HOST"),
-        "PORT": os.environ.get("DATABASE_PORT"),
-        "URI": os.environ.get("DATABASE_URL"),
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "d7k7r2pedne4kt",
+        "USER": "ekefqqcydzyysq",
+        "PASSWORD": "e359b8f8b77f8a3e345f14a8e6bdfbe2a25c523b89a274bd56ba016d24731a4f",
+        "HOST": "ec2-79-125-2-142.eu-west-1.compute.amazonaws.com",
+        "PORT": "5432",
+        "URI": "postgres://ekefqqcydzyysq:e359b8f8b77f8a3e345f14a8e6bdfbe2a25c523b89a274bd56ba016d24731a4f@ec2-79-125-2-142.eu-west-1.compute.amazonaws.com:5432/d7k7r2pedne4kt",
     }
 }
 
