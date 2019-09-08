@@ -1,0 +1,1 @@
+web: gunicorn rotd_game.wsgi:application
