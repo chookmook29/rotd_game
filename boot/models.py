@@ -56,6 +56,10 @@ class Boot(models.Model):
     aft_torp_door = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(2)], verbose_name="aft torp door")
     fuel_tanks = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(2)], verbose_name="fuel tanks")
     dive_planes = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(2)], verbose_name="dive planes")
+    electric_1 = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(4)], verbose_name="electric 1")
+    electric_2 = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(4)], verbose_name="electric 2")
+    diesel_1 = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(4)], verbose_name="diesel 1")
+    diesel_2 = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(4)], verbose_name="diesel 2")
     LW = "LW"
     SW = "SW"
     KIA = "KIA"
