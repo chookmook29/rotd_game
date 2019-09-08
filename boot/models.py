@@ -68,5 +68,7 @@ class Boot(models.Model):
     crew_wound_1 = models.CharField(default=0, max_length=10, choices=WOUND_CHOICES, verbose_name="1st crew wounds")
     crew_wound_2 = models.CharField(default=0, max_length=10, choices=WOUND_CHOICES, verbose_name="2nd crew wounds")
     crew_wound_3 = models.CharField(default=0, max_length=10, choices=WOUND_CHOICES, verbose_name="3rd crew wounds")
+    tonnage_sunk = models.IntegerField(default=0, verbose_name="tonnage sunk")
+    active = models.BooleanField(default=True)
     def __str__(self):
         return str(self.cmd_name) + " | " + str(self.bt_name)
